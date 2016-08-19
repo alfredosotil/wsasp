@@ -1,6 +1,6 @@
 (function ($) {
     "use strict";
-    jQuery(document).on('ready', function () {        
+    jQuery(document).on('ready', function () {
         $(window).on('scroll', function () {
             if ($(this).scrollTop() >= 50) {
                 $('div#scrollup').addClass('animated flipInY').fadeIn(200);
@@ -22,5 +22,11 @@
         $('.back-button').on('click', function () {
             history.go(-1);
         });
+
+        var source = $("#portafolio-template").html();
+        var template = Handlebars.compile(source);
+        var context = {title: "My New Post", body: "This is my first post!"};
+        var html = template(context);
+        $("section.single-page").html(html);
     });
 })(jQuery);

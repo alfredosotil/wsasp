@@ -1,4 +1,4 @@
-$('a#readMore').on('click', function (e) {
+$('a.readMore').on('click', function (e) {
     e.preventDefault();
     var $this = $(this);
     var $collapse = $this.closest('.collapse-group').find('.collapse');
