@@ -42,7 +42,62 @@
         <!-- CUSTOM STYLE -->
         <link href="stylesheets/style_dark_dark.css" id="switch_style" rel="stylesheet">
 
-
+        <!-- TEMPLATE HANDLEBARS -->
+        <script id="portafolio-template" type="text/x-handlebars-template">
+            <div class="container">
+            <div class="section-title">
+            <h4 class="text-uppercase text-center"><img src="images/icons/safe.png" alt="">Portfolios</h4>
+            </div>
+            <div class="row" id="primary">
+            <div id="content" class="col-sm-12">
+            <div class="post card">
+            <div class="post-image">
+            <div id="clients-slider"
+            class="swiper-container swiper-container-portfolios">
+            <div class="swiper-wrapper">
+            <div class="swiper-slide">
+            <img class="img-responsive" alt="demo" src="images/portfolio-single/{{images.one}}">
+            </div>
+            <div class="swiper-slide">
+            <img class="img-responsive" alt="demo" src="images/portfolio-single/{{images.two}}">
+            </div>
+            <div class="swiper-slide">
+            <img class="img-responsive" alt="demo" src="images/portfolio-single/{{images.three}}">
+            </div>
+            </div>
+            <div class="swiper-pagination swiper-pagination-portfolios"></div>
+            </div>
+            </div>
+            <header>
+            <h2>{{title}}
+            <time datetime="{{time}}">{{timewritten}}</time>
+            </h2>
+            <hr>
+            <div class="project-detail">
+            <p><strong>Client :</strong>{{client}}</p>
+            <p><strong>Delivered :</strong>{{delivered}}</p>
+            <p><strong>Link :</strong><a target="blank" href="http://{{linksite}}">{{linksite}}</a>
+            </p>
+            <p><strong>Type :</strong>{{type}}</p>
+            </div>
+            </header>
+            <div class="post-body">
+            <h3>Project Details</h3>
+            <p>{{projectdetail}}</p>
+            <!--<h3>Feedback</h3>
+            <p>{{feedback}}
+            </p> -->
+            <div class="client-info">
+            <p>{{owner}}</p>
+            <p>{{ownercharge}}</p>
+            <p>{{ownerarea}}</p>
+            </div>
+            </div>
+            </div>
+            </div>
+            </div>
+            </div>
+        </script>
     </head>
     <body>
 
@@ -117,70 +172,6 @@
         <script src="javascript/vendors/scrollreveal.min.js"></script>
         <script src="javascript/vendors/swiper.jquery.min.js"></script>
         <script src="javascript/vendors/handlebars.min-latest.js"></script>
-        <script id="portafolio-template" type="text/x-handlebars-template">
-            <div class="container">
-            <div class="section-title">
-            <h4 class="text-uppercase text-center"><img src="images/icons/safe.png" alt="demo">Portfolios</h4>
-            </div>
-            <div class="row" id="primary">
-            <div id="content" class="col-sm-12">
-            <div class="post card">
-            <div class="post-image">
-
-            <div id="clients-slider"
-            class="swiper-container swiper-container-portfolios">
-            <div class="swiper-wrapper">
-            <div class="swiper-slide">
-            <img class="img-responsive" alt="demo" src="images/portfolio-single/{{images.one}}">
-            </div>
-
-            <div class="swiper-slide">
-            <img class="img-responsive" alt="demo" src="images/portfolio-single/{{images.two}}">
-            </div>
-
-            <div class="swiper-slide">
-            <img class="img-responsive" alt="demo" src="images/portfolio-single/{{images.three}}">
-            </div>
-            </div>
-            <div class="swiper-pagination swiper-pagination-portfolios"></div>
-            </div>
-
-            </div>
-
-            <header>
-            <h2>{{title}}
-            <time datetime="{{time}}">{{timewritten}}</time>
-            </h2>
-            <hr>
-            <div class="project-detail">
-            <p><strong>Client :</strong>{{client}}</p>
-            <p><strong>Delivered :</strong>{{delivered}}</p>
-            <p><strong>Link :</strong><a href="{{linksite}}">{{linksite}}</a>
-            </p>
-            <p><strong>Type :</strong>{{type}}</p>
-            </div>
-            </header>
-            <div class="post-body">
-            <h3>Project Details</h3>
-            <p>{{projectdetail}}</p>
-
-            <h3>Feedback</h3>
-            <p>{{feedback}}
-            </p>
-            <div class="client-info">
-            <p>{{owner}}</p>
-            <p>{{ownercharge}}</p>
-            <p>{{ownerarea}}</p>
-            </div>
-
-            </div>
-            </div>
-
-            </div>
-
-            </div>
-            </div>
-        </script>
         <script src="javascript/single-page.js"></script>
     </body>
 
